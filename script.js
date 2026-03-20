@@ -13,6 +13,8 @@ let playerArray = []
  let sequencia = document.getElementById('sequencia')
  let seqjogador = document.getElementById('seqjogador')
  let leveltitle = document.getElementById('level-title')
+ let mostrarRecorde = document.getElementById('recorde')
+ 
 
  let btngreen = document.getElementById('green');
  let btnblue = document.getElementById('blue');
@@ -41,6 +43,7 @@ start.addEventListener('click',comecar)
  //sequencia dos sons
 
 let indice;
+let recorde=0;
 
 function error(){
   wrong.play()
@@ -105,6 +108,7 @@ function btn1(){
    if(pcArray[indice]=== playerArray[indice]){
 
       seqjogador.innerHTML =  playerArray.length 
+      recorde = playerArray.length
  
 if(pcArray.length===playerArray.length){
    setTimeout(() => {
@@ -145,7 +149,8 @@ indice = playerArray.length -1
 
    if(pcArray[indice]=== playerArray[indice]){
 
-    seqjogador.innerHTML =  playerArray.length 
+    seqjogador.innerHTML =  playerArray.length
+     recorde = playerArray.length 
  
 if(pcArray.length===playerArray.length){
    setTimeout(() => {
@@ -186,6 +191,7 @@ indice = playerArray.length -1
    if(pcArray[indice]=== playerArray[indice]){
 
     seqjogador.innerHTML =  playerArray.length 
+     recorde = playerArray.length
  
 if(pcArray.length===playerArray.length){
    setTimeout(() => {
@@ -285,7 +291,7 @@ function piscar(numeroAleatorio){
 }
 
 
-
+ //mostrarRecorde.innerHTML = "Seu recorde é ⚡: " +recorde 
 
 
 function Pcplay2(){
@@ -311,6 +317,7 @@ cores[pcArray[i]].play()
 }
     sequencia.innerHTML = pcArray.length + 1
     seqjogador.innerHTML = 0
+    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " +recorde 
   
    setTimeout(() => {
 
@@ -328,6 +335,11 @@ Pcplay()
 
 function comecar(){
 
+   pcArray=[]
+    playerArray=[]
+    sequencia.innerHTML = 0
+    seqjogador.innerHTML = 0
+    
  
 
   setTimeout(() => {
