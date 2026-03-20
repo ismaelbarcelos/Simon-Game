@@ -1,6 +1,10 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #181717;
+ 
+}
+#principal{
+  display:flex;
 }
 
 #level-title {
@@ -9,6 +13,7 @@ body {
   margin:  5%;
   color: #FEF2BF;
 }
+
 
 .container {
   display: block;
@@ -22,7 +27,7 @@ body {
   display: inline-block;
   height: 150px;
   width: 150px;
-  border: 10px solid black;
+ 
  
 }
 
@@ -53,8 +58,8 @@ body {
 }
 
 .pressed {
-  box-shadow: 0 0 28px white;
-  background-color: grey;
+  box-shadow: 1px 0 28px white;
+  background-color: rgb(116, 116, 116);
 }
 
 #valores{

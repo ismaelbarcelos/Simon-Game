@@ -13,6 +13,7 @@ let playerArray = []
  let sequencia = document.getElementById('sequencia')
  let seqjogador = document.getElementById('seqjogador')
  let leveltitle = document.getElementById('level-title')
+ let vez = document.getElementById('vez')
  let mostrarRecorde = document.getElementById('recorde')
  
 
@@ -291,7 +292,7 @@ function piscar(numeroAleatorio){
 }
 
 
- //mostrarRecorde.innerHTML = "Seu recorde é ⚡: " +recorde 
+
 
 
 function Pcplay2(){
@@ -305,7 +306,7 @@ for(let i = 0 ; i<pcArray.length ;i++){
 cores[pcArray[i]].play()
    piscar(pcArray[i])
 
-    
+    vez.innerHTML = "olhe a sequência"
  
 
   
@@ -328,6 +329,7 @@ Pcplay()
    },pcArray.length *1000);
 
  playerArray =[]
+ vez.innerHTML = "Sua vez"
 
 }
 
