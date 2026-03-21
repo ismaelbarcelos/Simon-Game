@@ -67,10 +67,13 @@ function btn0(){
  indice = playerArray.length -1 
 
    if(pcArray[indice]=== playerArray[indice]){
-
-     seqjogador.innerHTML =  playerArray.length 
+  seqjogador.innerHTML =  playerArray.length 
  
 if(pcArray.length===playerArray.length){
+
+    
+ recorde = playerArray.length
+
    setTimeout(() => {
 
 
@@ -109,9 +112,11 @@ function btn1(){
    if(pcArray[indice]=== playerArray[indice]){
 
       seqjogador.innerHTML =  playerArray.length 
-      recorde = playerArray.length
  
 if(pcArray.length===playerArray.length){
+
+      recorde = playerArray.length
+
    setTimeout(() => {
 
 
@@ -150,10 +155,12 @@ indice = playerArray.length -1
 
    if(pcArray[indice]=== playerArray[indice]){
 
-    seqjogador.innerHTML =  playerArray.length
-     recorde = playerArray.length 
+     seqjogador.innerHTML =  playerArray.length
  
 if(pcArray.length===playerArray.length){
+ 
+     recorde = playerArray.length 
+
    setTimeout(() => {
 
 
@@ -191,10 +198,12 @@ indice = playerArray.length -1
 
    if(pcArray[indice]=== playerArray[indice]){
 
-    seqjogador.innerHTML =  playerArray.length 
-     recorde = playerArray.length
+   seqjogador.innerHTML =  playerArray.length 
  
 if(pcArray.length===playerArray.length){
+ 
+     recorde = playerArray.length
+
    setTimeout(() => {
 
 
@@ -318,7 +327,7 @@ cores[pcArray[i]].play()
 }
     sequencia.innerHTML = pcArray.length + 1
     seqjogador.innerHTML = 0
-    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " +recorde 
+    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde 
   
    setTimeout(() => {
 
