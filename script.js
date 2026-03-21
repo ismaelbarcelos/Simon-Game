@@ -91,10 +91,10 @@ if(pcArray.length===playerArray.length){
  recorde = playerArray.length
 
  estado = "pc"
-  vez.innerHTML = "olhe a sequência"
+ 
 
    setTimeout(() => {
-
+ vez.innerHTML = "olhe a sequência"
 
     Pcplay2()
  
@@ -145,11 +145,11 @@ if(pcArray.length===playerArray.length){
       recorde = playerArray.length
 
       estado = "pc"
-       vez.innerHTML = "olhe a sequência"
+      
 
    setTimeout(() => {
 
-
+ vez.innerHTML = "olhe a sequência"
     Pcplay2()
  
  
@@ -195,10 +195,10 @@ if(pcArray.length===playerArray.length){
      recorde = playerArray.length 
 
      estado = "pc"
-      vez.innerHTML = "olhe a sequência"
+     
 
    setTimeout(() => {
-
+ vez.innerHTML = "olhe a sequência"
 
     Pcplay2()
     
@@ -246,13 +246,13 @@ if(pcArray.length===playerArray.length){
      recorde = playerArray.length
 
      estado = "pc"
-      vez.innerHTML = "olhe a sequência"
+     
 
    setTimeout(() => {
 
 
     Pcplay2()
- 
+  vez.innerHTML = "olhe a sequência"
  
    }, 500);
 }
