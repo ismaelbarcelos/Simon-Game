@@ -362,6 +362,7 @@ function piscar(numeroAleatorio){
 
 
 function Pcplay2(){
+  
  if(estado === "pc"){
  
  
@@ -372,7 +373,7 @@ for(let i = 0 ; i<pcArray.length ;i++){
 cores[pcArray[i]].play()
    piscar(pcArray[i])
 
-   
+  
  
 
   
@@ -388,17 +389,15 @@ cores[pcArray[i]].play()
   
    setTimeout(() => {
 
-
-   
-
 Pcplay()
  piscar(numeroAleatorio)
- 
+ estado = "jogador" 
+ console.log(estado)
    },pcArray.length *1000);
 
  playerArray =[]
 
-estado = "jogador"
+
 
 
 }
@@ -453,6 +452,6 @@ Pcplay()
   function resetar(){
    pcArray=[]
     playerArray=[]
-   leveltitle.innerHTML = "voce errou! 😔 Clique em iniciar para jogar"
+   leveltitle.innerHTML = "voce errou! 😔 Clique em Start Game para jogar"
   }
 
