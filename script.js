@@ -413,7 +413,7 @@ cores[pcArray[i]].play()
 }
     sequencia.innerHTML = pcArray.length +1
     seqjogador.innerHTML = 0
-    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde
+    mostrarRecorde.innerHTML = "Seu recorde ⚡🧠 é : " + recorde
   
    setTimeout(() => {
 
@@ -480,6 +480,6 @@ Pcplay()
 
   function resetar(){
     localStorage.removeItem("recorde")
-    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : 0" 
+    mostrarRecorde.innerHTML = "Seu recorde ⚡🧠 é : 0" 
     comecar()
   }
