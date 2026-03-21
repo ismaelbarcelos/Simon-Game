@@ -22,7 +22,7 @@ let recorde =localStorage.getItem("recorde")||0;
  let vez = document.getElementById('vez')
  let mostrarRecorde = document.getElementById('recorde')
  
- mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde 
+ mostrarRecorde.innerHTML = "Seu recorde ⚡🧠 é : " + recorde 
 
  let btngreen = document.getElementById('green');
  let btnblue = document.getElementById('blue');
