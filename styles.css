@@ -50,6 +50,16 @@ main {
  
 }
 
+.botao{
+  padding: 2px;
+  margin: 20px;
+  width: 200px;
+  height: 50px;
+  font-size: 21px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: cornflowerblue;
+}
+
 .game-over {
   background-color: red;
   opacity: 0.8;
@@ -89,6 +99,16 @@ margin: -90px;
 font-size: 50px;
 color: #FEF2BF;
 font-size: 48px;
+}
+
+#dados{
+  color: aliceblue;
+}
+
+#vez{
+ font-size: 55px;
+  color: #FEF2BF;
+
 }
 
 

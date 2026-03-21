@@ -42,6 +42,14 @@ start.addEventListener('click',comecar)
     btnyellow.addEventListener('click',btn3)
 
  //sequencia dos sons
+let estado;
+
+ //if(estado ==="pc "){
+ // vez.innerHTML = "olhe a sequencia"
+//}else if(estado ==="jogador"){
+ // vez.innerHTML = "Sua vez"
+//}
+
 
 let indice;
 let recorde=0;
@@ -51,7 +59,15 @@ function error(){
 }
 
 
+
+
+
+
+
 function btn0(){
+
+  if(estado ==="jogador"){
+
   green.play()
  
    btngreen.classList.add("pressed");
@@ -74,6 +90,9 @@ if(pcArray.length===playerArray.length){
     
  recorde = playerArray.length
 
+ estado = "pc"
+  vez.innerHTML = "olhe a sequência"
+
    setTimeout(() => {
 
 
@@ -82,7 +101,7 @@ if(pcArray.length===playerArray.length){
  
    }, 500);
 }
- 
+  
     
  
  
@@ -93,9 +112,17 @@ error()
 
 }
 
+ }
+ }
+ // fim da função
 
-}
+
 function btn1(){
+
+  if(estado ==="jogador"){
+console.log(estado)
+  
+
  blue.play()
 
    btnblue.classList.add("pressed");
@@ -117,6 +144,9 @@ if(pcArray.length===playerArray.length){
 
       recorde = playerArray.length
 
+      estado = "pc"
+       vez.innerHTML = "olhe a sequência"
+
    setTimeout(() => {
 
 
@@ -125,8 +155,6 @@ if(pcArray.length===playerArray.length){
  
    }, 500);
 }
-    
-
  
  }else {
   error()
@@ -134,12 +162,17 @@ if(pcArray.length===playerArray.length){
   
  }
 
-
-
-
-
 }
+ }
+ // fim da função 
+
+
 function btn2(){
+
+if(estado ==="jogador"){
+console.log(estado)
+ 
+
   red.play()
 
     btnred.classList.add("pressed");
@@ -161,6 +194,9 @@ if(pcArray.length===playerArray.length){
  
      recorde = playerArray.length 
 
+     estado = "pc"
+      vez.innerHTML = "olhe a sequência"
+
    setTimeout(() => {
 
 
@@ -178,11 +214,16 @@ if(pcArray.length===playerArray.length){
   resetar()
   
  }
-
-
-
 }
+ }
+ // fim da função 
+
 function btn3(){
+
+  if(estado ==="jogador"){
+console.log(estado)
+ 
+
   yellow.play()
 
     btnyellow.classList.add("pressed");
@@ -204,6 +245,9 @@ if(pcArray.length===playerArray.length){
  
      recorde = playerArray.length
 
+     estado = "pc"
+      vez.innerHTML = "olhe a sequência"
+
    setTimeout(() => {
 
 
@@ -220,10 +264,11 @@ if(pcArray.length===playerArray.length){
  error()
   resetar()
  }
-
-
-
 }
+ }
+// fim da função
+
+ 
  
 let Cores = ["green","red","blue","yellow"]
 
@@ -234,17 +279,29 @@ let cores = [
   new Audio('sounds/yellow.mp3')
 ];
 
+// função de computador escolherr uma cor aleatoria 
+
 function Pcplay(){
 
   ramdom()
   pcArray.push(numeroAleatorio)
+
+ // vez.innerHTML = "Olhe sequência"
   
  
 
    setTimeout(() => {
     cores[numeroAleatorio].play()
+     
   }, 700);
+estado ="jogador"
+console.log(estado)
 
+setTimeout(() => {
+   
+     vez.innerHTML = "Sua vez"
+
+  }, 800);
   
  }
 
@@ -305,7 +362,7 @@ function piscar(numeroAleatorio){
 
 
 function Pcplay2(){
- 
+ if(estado === "pc"){
  
  
 for(let i = 0 ; i<pcArray.length ;i++){
@@ -315,7 +372,7 @@ for(let i = 0 ; i<pcArray.length ;i++){
 cores[pcArray[i]].play()
    piscar(pcArray[i])
 
-    vez.innerHTML = "olhe a sequência"
+   
  
 
   
@@ -332,20 +389,32 @@ cores[pcArray[i]].play()
    setTimeout(() => {
 
 
+   
+
 Pcplay()
  piscar(numeroAleatorio)
  
    },pcArray.length *1000);
 
  playerArray =[]
- vez.innerHTML = "Sua vez"
+
+estado = "jogador"
+
 
 }
 
 
 
-function comecar(){
 
+}
+
+
+
+
+
+function comecar(){
+estado = "pc"
+console.log(estado)
    pcArray=[]
     playerArray=[]
     sequencia.innerHTML = 0
@@ -355,15 +424,17 @@ function comecar(){
 
   setTimeout(() => {
 
+   
 
 Pcplay()
  piscar(numeroAleatorio)
 
   leveltitle.innerHTML = "Simon Game"
+  vez.innerHTML = ""
 
   sequencia.innerHTML = pcArray.length
    },1000);
-
+ 
 }
  
 
@@ -385,27 +456,3 @@ Pcplay()
    leveltitle.innerHTML = "voce errou! 😔 Clique em iniciar para jogar"
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
