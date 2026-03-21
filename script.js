@@ -350,7 +350,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btngreen.classList.remove("pressed");
-  }, 200);
+  }, 300);
 
    
   }else if(numeroAleatorio==1){
@@ -361,7 +361,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnblue.classList.remove("pressed");
-  }, 200);
+  }, 300);
 
    
   }else if(numeroAleatorio==2){
@@ -371,7 +371,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnred.classList.remove("pressed");
-  }, 200);
+  }, 300);
 
     
   }else if(numeroAleatorio == 3){
@@ -381,7 +381,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnyellow.classList.remove("pressed");
-  }, 200);
+  }, 300);
 
     
   }
