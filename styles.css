@@ -21,8 +21,16 @@ main {
 
 .container {
   text-align: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
@@ -36,8 +44,8 @@ main {
 .btn {
   margin: 10px;
   display: inline-block;
-  height: 150px;
-  width:150px;
+  height:350px;
+  width:45%;
  
  
 }
@@ -85,10 +93,10 @@ font-size: 48px;
 
 
 
-@media (max-width: 768px) {
+@media (min-width: 1068px) {
   .btn {
-    width: 35vw;
-    height: 35vw;
+    width:150px;
+    height: 150px;
   }
 
 
