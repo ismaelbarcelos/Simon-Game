@@ -51,13 +51,6 @@ start.addEventListener('click',comecar)
  //sequencia dos sons
 let estado;
 
- //if(estado ==="pc "){
- // vez.innerHTML = "olhe a sequencia"
-//}else if(estado ==="jogador"){
- // vez.innerHTML = "Sua vez"
-//}
-
-
 let indice;
 
 let Suasequencia;
@@ -109,7 +102,7 @@ if(pcArray.length===playerArray.length){
     Pcplay2()
  
  
-   }, 500);
+   }, 2000);
 }
   
     
@@ -173,7 +166,7 @@ if(pcArray.length===playerArray.length){
     Pcplay2()
  
  
-   }, 500);
+   }, 2000);
 }
  
  }else {
@@ -202,7 +195,7 @@ if(estado ==="jogador"){
   }, 300);
 
   playerArray.push(2)
-  console.log("player "+playerArray)
+  
 
 indice = playerArray.length -1 
 
@@ -234,7 +227,7 @@ if(pcArray.length===playerArray.length){
     
  
  
-   }, 500);
+   }, 2000);
 }
  
 
@@ -295,7 +288,7 @@ if(pcArray.length===playerArray.length){
     Pcplay2()
   vez.innerHTML = "olhe a sequência"
  
-   }, 500);
+   }, 2000);
 }
  
     
@@ -414,13 +407,7 @@ for(let i = 0 ; i<pcArray.length ;i++){
 cores[pcArray[i]].play()
    piscar(pcArray[i])
 
-  
- 
-
-  
- 
- console.log("pc array "+pcArray)
-   },i * 1000);
+   },i * 1200  );
 
   
 }
@@ -433,8 +420,8 @@ cores[pcArray[i]].play()
 Pcplay()
  piscar(numeroAleatorio)
  estado = "jogador" 
- console.log(estado)
-   },pcArray.length *1000);
+ 
+   },pcArray.length *1200);
 
  playerArray =[]
 
@@ -459,6 +446,8 @@ console.log(estado)
     playerArray=[]
     sequencia.innerHTML = 0
     seqjogador.innerHTML = 0
+
+vez.innerHTML = "Prepare-se"
     
  
 
@@ -474,22 +463,13 @@ Pcplay()
 
   sequencia.innerHTML = pcArray.length
   
-   },1000);
+   },3000);
  
 }
  
-
-
-  
-    
  
  //fim 
  
-
- 
-
-
-
   
   function error(){
    pcArray=[]
