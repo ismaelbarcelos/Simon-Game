@@ -2,6 +2,12 @@
  
 let pcArray = []
 let playerArray = []
+
+let recorde =localStorage.getItem("recorde")||0;
+
+
+
+
  
  
  let green = new Audio('sounds/green.mp3')
@@ -16,6 +22,7 @@ let playerArray = []
  let vez = document.getElementById('vez')
  let mostrarRecorde = document.getElementById('recorde')
  
+ mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde 
 
  let btngreen = document.getElementById('green');
  let btnblue = document.getElementById('blue');
@@ -52,16 +59,8 @@ let estado;
 
 
 let indice;
-let recorde=0;
 
-function error(){
-  wrong.play()
-}
-
-
-
-
-
+let Suasequencia;
 
 
 function btn0(){
@@ -78,7 +77,7 @@ function btn0(){
 
 
  playerArray.push(0)
- console.log("player "+playerArray)
+
 
  indice = playerArray.length -1 
 
@@ -88,7 +87,18 @@ function btn0(){
 if(pcArray.length===playerArray.length){
 
     
- recorde = playerArray.length
+ Suasequencia = playerArray.length
+
+ 
+
+ if(recorde>Suasequencia){
+  recorde = recorde
+   localStorage.setItem("recorde", recorde)
+}else{
+  recorde = Suasequencia
+   localStorage.setItem("recorde", recorde)
+}
+
 
  estado = "pc"
  
@@ -108,7 +118,7 @@ if(pcArray.length===playerArray.length){
  }else {
   
 error()
-  resetar()
+
 
 }
 
@@ -120,7 +130,7 @@ error()
 function btn1(){
 
   if(estado ==="jogador"){
-console.log(estado)
+
   
 
  blue.play()
@@ -132,7 +142,7 @@ console.log(estado)
   }, 300);
 
  playerArray.push(1)
- console.log("player "+playerArray)
+
 
  indice = playerArray.length -1 
 
@@ -142,7 +152,17 @@ console.log(estado)
  
 if(pcArray.length===playerArray.length){
 
-      recorde = playerArray.length
+      Suasequencia = playerArray.length
+     
+
+      if(recorde>Suasequencia){
+  recorde = recorde
+   localStorage.setItem("recorde", recorde)
+}else{
+   recorde = Suasequencia
+    localStorage.setItem("recorde", recorde)
+}
+
 
       estado = "pc"
       
@@ -158,7 +178,7 @@ if(pcArray.length===playerArray.length){
  
  }else {
   error()
-  resetar()
+ 
   
  }
 
@@ -170,7 +190,7 @@ if(pcArray.length===playerArray.length){
 function btn2(){
 
 if(estado ==="jogador"){
-console.log(estado)
+
  
 
   red.play()
@@ -192,7 +212,17 @@ indice = playerArray.length -1
  
 if(pcArray.length===playerArray.length){
  
-     recorde = playerArray.length 
+    Suasequencia = playerArray.length 
+   
+
+    if(recorde>Suasequencia){
+  recorde = recorde
+   localStorage.setItem("recorde", recorde)
+}else{
+   recorde = Suasequencia
+    localStorage.setItem("recorde", recorde)
+}
+
 
      estado = "pc"
      
@@ -211,7 +241,7 @@ if(pcArray.length===playerArray.length){
  
  }else {
  error()
-  resetar()
+  
   
  }
 }
@@ -243,7 +273,18 @@ indice = playerArray.length -1
  
 if(pcArray.length===playerArray.length){
  
-     recorde = playerArray.length
+    Suasequencia = playerArray.length
+    
+
+    if(recorde>Suasequencia){
+
+  recorde = recorde
+   localStorage.setItem("recorde", recorde)
+}else{
+  recorde = Suasequencia
+   localStorage.setItem("recorde", recorde)
+}
+
 
      estado = "pc"
      
@@ -262,7 +303,7 @@ if(pcArray.length===playerArray.length){
  
  }else {
  error()
-  resetar()
+  
  }
 }
  }
@@ -316,7 +357,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btngreen.classList.remove("pressed");
-  }, 400);
+  }, 200);
 
    
   }else if(numeroAleatorio==1){
@@ -327,7 +368,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnblue.classList.remove("pressed");
-  }, 400);
+  }, 200);
 
    
   }else if(numeroAleatorio==2){
@@ -337,7 +378,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnred.classList.remove("pressed");
-  }, 400);
+  }, 200);
 
     
   }else if(numeroAleatorio == 3){
@@ -347,7 +388,7 @@ function piscar(numeroAleatorio){
 
   setTimeout(() => {
     btnyellow.classList.remove("pressed");
-  }, 400);
+  }, 200);
 
     
   }
@@ -383,9 +424,9 @@ cores[pcArray[i]].play()
 
   
 }
-    sequencia.innerHTML = pcArray.length + 1
+    sequencia.innerHTML = pcArray.length +1
     seqjogador.innerHTML = 0
-    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde 
+    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : " + recorde
   
    setTimeout(() => {
 
@@ -432,6 +473,7 @@ Pcplay()
   vez.innerHTML = ""
 
   sequencia.innerHTML = pcArray.length
+  
    },1000);
  
 }
@@ -449,9 +491,14 @@ Pcplay()
 
 
   
-  function resetar(){
+  function error(){
    pcArray=[]
     playerArray=[]
    leveltitle.innerHTML = "voce errou! 😔 Clique em Start Game para jogar"
+     wrong.play()
   }
 
+  function resetar(){
+    localStorage.removeItem("recorde")
+    mostrarRecorde.innerHTML = "Seu recorde ⚡ é : 0" 
+  }

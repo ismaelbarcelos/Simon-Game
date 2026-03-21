@@ -12,6 +12,7 @@ body {
 }
 
 main {
+  
   height: 100vh; /* ocupa a tela inteira */
   display: flex;
   justify-content: center; /* centraliza horizontal */
