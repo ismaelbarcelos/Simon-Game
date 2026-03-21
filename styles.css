@@ -111,6 +111,11 @@ font-size: 48px;
 
 }
 
+footer{
+  font-size: 40px; 
+  color: #FEF2BF;
+}
+
 
 
 @media (min-width: 1068px) {
